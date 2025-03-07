@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock-Paper-Scissors</title>
+</head>
+<body>
+<h1>Rock-Paper-Scissors Game</h1>
+<form action="/result" method="post">
+    <label for="choice">Choose your move:</label>
+    <select name="playerChoice" id="choice">
+        <option value="Rock">Rock</option>
+        <option value="Paper">Paper</option>
+        <option value="Scissors">Scissors</option>
+    </select>
+    <button type="submit">Play</button>
+</form>
+</body>
+</html>
