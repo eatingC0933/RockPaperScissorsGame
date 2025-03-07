@@ -6,14 +6,26 @@
 </head>
 <body>
 <h1>Rock-Paper-Scissors Game</h1>
-<form action="/result" method="post">
+
+<form th:action="@{/play}" method="post">
     <label for="choice">Choose your move:</label>
-    <select name="playerChoice" id="choice">
+    <select name="choice" id="choice" required>
         <option value="Rock">Rock</option>
         <option value="Paper">Paper</option>
         <option value="Scissors">Scissors</option>
     </select>
     <button type="submit">Play</button>
+
+
+
 </form>
+
+
+<h2>Game Result</h2>
+<p th:if="${playerChoice}" th:text="'You chose: ' + ${playerChoice}"></p>
+<p th:if="${computerChoice}" th:text="'Computer chose: ' + ${computerChoice}"></p>
+<p th:if="${result}" th:text="${result}"></p>
+
+
 </body>
 </html>
